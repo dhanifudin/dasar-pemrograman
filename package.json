@@ -1,0 +1,23 @@
+{
+  "name": "dasar-pemrograman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "reveal.js": "^3.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhanifudin/dasar-pemrograman.git"
+  },
+  "author": "Dian Hanifudin Subhi <dhanifudin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dhanifudin/dasar-pemrograman/issues"
+  },
+  "homepage": "https://github.com/dhanifudin/dasar-pemrograman#readme"
+}
