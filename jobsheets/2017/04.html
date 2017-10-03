@@ -1,0 +1,932 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Jobsheet 4 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="03.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Dasar Pemrograman</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01.html">
+            
+                <a href="01.html">
+            
+                    
+                    Jobsheet 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02.html">
+            
+                <a href="02.html">
+            
+                    
+                    Jobsheet 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03.html">
+            
+                <a href="03.html">
+            
+                    
+                    Jobsheet 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="04.html">
+            
+                <a href="04.html">
+            
+                    
+                    Jobsheet 4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Jobsheet 4</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>a# Jobsheet 04 - Sintaks, Tipe Data, Variabel, Input-Output, Sequence</p>
+<h3 id="kompetensi">Kompetensi</h3>
+<ol>
+<li>Mahasiswa memahami sintaks dasar bahasa pemrograman Java.</li>
+<li>Mahasiswa mampu mengimplementasikan tipe data, variabel, Input-Output ke
+dalam program bahasa Java.</li>
+<li>Mahasiswa memahami konsep alur kontrol sequence pada program.</li>
+</ol>
+<h3 id="alat-dan-bahan">Alat dan Bahan</h3>
+<ol>
+<li>PC/Laptop</li>
+<li>Text Editor (Sublime Text)</li>
+<li>JDK</li>
+</ol>
+<h3 id="ulasan-teori">Ulasan Teori</h3>
+<p>Dalam membuat sebuah program, kita harus mengikuti struktur dasar dari bahasa
+pemrograman. Ada beberapa komponen yang hampir selalu muncul setiap kali kita
+membuat program. Komponen-komponen tersebut antara lain:</p>
+<ol>
+<li>Fungsi main()</li>
+<li>Deklarasi variabel</li>
+<li>Perintah (statement)</li>
+<li>Keyword</li>
+<li>Komentar</li>
+<li>Kurung kurawal</li>
+</ol>
+<p>Berikut adalah contoh kode program beserta penjelasan strukturnya:</p>
+<pre><code class="lang-java"><span class="hljs-comment">// &quot;import&quot; untuk menyertakan fungsi-fungsi dari sebuah library</span>
+<span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-comment">// program harus ditulis dalam sebuah class</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersegiPanjang</span> </span>{ <span class="hljs-comment">// kurung kurawal buka</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+    <span class="hljs-comment">// deklarasi variabel</span>
+    <span class="hljs-keyword">int</span> panjang;
+    <span class="hljs-keyword">int</span> lebar;
+    <span class="hljs-keyword">int</span> luas;
+
+    <span class="hljs-comment">// statement</span>
+    panjang = <span class="hljs-number">5</span>;
+    lebar = <span class="hljs-number">3</span>;
+    luas = panjang * lebar;
+    System.out.println(<span class="hljs-string">&quot;Luas persegi panjang: &quot;</span> + luas);
+  }
+} <span class="hljs-comment">// kurung kurawal tutup</span>
+</code></pre>
+<h4 id="fungsi-utamafungsi-main">Fungsi Utama/Fungsi main()</h4>
+<p>Agar program java dapat dijalankan, harus terdapat fungsi main(). Program yang
+tidak memiliki fungsi ini, maka tidak dapat dijalankan secara langsung. Ketika
+fungsi main dipanggil, akan dieksekusi perintah-perintah/statement yang terdapat
+dalam blok kodenya. Fungsi main dibuka dengan kurung kurawal buka <code>{</code> dan kurung
+kurawal tutup <code>}</code>. Secara garis besar, isi dari fungsi main() pada program di
+atas adalah:</p>
+<ol>
+<li>Perintah untuk memberikan nilai panjang dan lebar dengan nilai 5 dan 3.</li>
+<li>Perintah untuk menghitung luas segiempat.</li>
+<li>Perintah untuk menampilkan luas yang telah dihitung ke layar.</li>
+</ol>
+<h4 id="deklarasi-variabel">Deklarasi Variabel</h4>
+<p>Variabel adalah tempat untuk menyimpan data. Deklarasi variabel adalah sebuah
+perintah agar komputer menyediakan variabel yang akan kita pakai. Pendeklarasian
+variabel harus diawali dengan tipe variabel, nama variabel kemudian diakhiri
+dengan titik-koma <code>;</code>.</p>
+<p>Beberapa tipe variabel yang sering digunakan:</p>
+<ol>
+<li>Variabel Integer (int) untuk menyimpan bilangan bulat/tanpa koma. Contoh:
+12, 1, 76, 100, 99.</li>
+<li>Variabel float (float) untuk menyimpan bilangan berkoma/real. Contoh: 12.8,
+1.5, 3.14.</li>
+<li>Variabel Strin untuk menyimpan karakter/kata/kalimat bisa berupa huruf
+ataupun angka. Contoh: &quot;Polinema&quot;, &quot;Budi&quot;, &quot;Berat badan 60 kg&quot;, &quot;Rp.
+500.000&quot;</li>
+</ol>
+<p>Dalam memberi nama variabel ada beberapa aturan yang harus dipenuhi, antara
+lain:</p>
+<ul>
+<li>Diawali dengan huruf atau karakter underscore <code>_</code></li>
+<li>Nama variabel bersifat case sensitive (huruf besar dianggap berbeda dengan
+huruf kecil)</li>
+<li>Tidak boleh menggunakan spasi (sebagai pengganti dapat digunakan tanda
+underscore atau penggunaan huruf besar pada awal kata berikutnya)</li>
+<li>Tidak boleh menggunakan karakter khusus seperti <code>&lt;</code>,<code>&gt;</code>,<code>*</code>,<code>?</code>,<code>=</code> dan
+sebagainya.</li>
+</ul>
+<p>Beberapa Keyword yang tidak boleh digunakan sebagai nama variabel:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abstract</td>
+<td>default</td>
+<td>if</td>
+<td>private</td>
+<td>this</td>
+</tr>
+<tr>
+<td>assert</td>
+<td>do</td>
+<td>implements</td>
+<td>protected</td>
+<td>throw</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>double</td>
+<td>import</td>
+<td>public</td>
+<td>throws</td>
+</tr>
+<tr>
+<td>break</td>
+<td>else</td>
+<td>instanceof</td>
+<td>return</td>
+<td>transient</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>enum</td>
+<td>int</td>
+<td>short</td>
+<td>try</td>
+</tr>
+<tr>
+<td>case</td>
+<td>extends</td>
+<td>interface</td>
+<td>static</td>
+<td>void</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>final</td>
+<td>long</td>
+<td>strictfp</td>
+<td>volatile</td>
+</tr>
+<tr>
+<td>char</td>
+<td>finally</td>
+<td>native</td>
+<td>super</td>
+<td>while</td>
+</tr>
+<tr>
+<td>class</td>
+<td>float</td>
+<td>new</td>
+<td>switch</td>
+<td></td>
+</tr>
+<tr>
+<td>continue</td>
+<td>for</td>
+<td>package</td>
+<td>synchronized</td>
+</tr>
+</tbody>
+</table>
+<p>Selengkapnya, tipe-tipe variabel yang sering dipakai dalam pemrograman java ada
+di tabel berikut ini:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Values</th>
+<th>Default</th>
+<th>Size</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>signed integers</td>
+<td>0</td>
+<td>8 bits</td>
+<td>-128 to 127</td>
+</tr>
+<tr>
+<td>short</td>
+<td>signed integers</td>
+<td>0</td>
+<td>16 bits</td>
+<td>-32768 to 32767</td>
+</tr>
+<tr>
+<td>int</td>
+<td>signed integers</td>
+<td>0</td>
+<td>32 bits</td>
+<td>-2147483648 to 2147483647</td>
+</tr>
+<tr>
+<td>long</td>
+<td>signed integers</td>
+<td>0</td>
+<td>64 bits</td>
+<td>-9223372936854775808 to 9223372936854775807</td>
+</tr>
+<tr>
+<td>float</td>
+<td>IEEE 754 floating point</td>
+<td>0.0</td>
+<td>32 bits</td>
+<td>approximately &#xB1;3.40282347E+38F</td>
+</tr>
+<tr>
+<td>double</td>
+<td>IEEE 754 floating point</td>
+<td>0.0</td>
+<td>64 bits</td>
+<td>approximately &#xB1;1.79769313486231570E+308</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Unicode character</td>
+<td>\u0000</td>
+<td>16 bits</td>
+<td>\u0000 to \uFFFF</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>true, false</td>
+<td>false</td>
+<td>1 bit used in 32 bit integer</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<p>Selain harus memperhatikan jenis tipe data yang digunakan, tipe data juga
+mempunyai penulisan nilai yang berbeda. Sebagai contoh penulisan nilai tipe data
+char harus diapit dengan tanda <code>&apos;</code> (petik satu). Variabel String harus
+menggunakan tanda <code>&quot;</code> (petik dua). Dalam penulisan bilangan pecahan digunakan
+tanda <code>.</code> (titik) bukan koma. Secara umum, format deklarasi variabel dapat
+dinyatakan sebagai berikut:</p>
+<pre><code>tipe_data nama_variabel;
+tipe_data nama_variabel = nilai_awal;
+</code></pre><p><strong>Contoh</strong>:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">int</span> bilangan;
+<span class="hljs-keyword">float</span> volume, luas;
+<span class="hljs-keyword">int</span> angka = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">float</span> phi = <span class="hljs-number">3.14f</span>;
+<span class="hljs-keyword">char</span> kelas = <span class="hljs-string">&apos;A&apos;</span>;
+String nama = <span class="hljs-string">&quot;Joko Sembung&quot;</span>;
+</code></pre>
+<h4 id="sequencestatement">Sequence/Statement</h4>
+<p>Perintah/statemen digunakan untuk memerintahkan komputer untuk melakukan
+sesuatu. Contoh, pada program menghitung luas persegi panjang diatas, ada
+beberapa statemen:</p>
+<ol>
+<li><p>Perintah <code>panjang = 10;</code> memerintahkan komputer untuk mengisi variabel panjang
+dengan nilai 10. Begitu juga dengan perintah <code>lebar = 5;</code></p>
+</li>
+<li><p>Perintah <code>luas = panjang * lebar;</code> memerintahkan komputer untuk menghitung
+hasil perkalian dari panjang dan lebar, lalu menyimpannya kedalam variabel
+luas.</p>
+</li>
+<li><p>Perintah <code>System.out.println(&quot;Luas persegi panjang: &quot; + luas);</code> memerintahkan
+komputer untuk menampilkan isi variabel luas ke layar.</p>
+</li>
+</ol>
+<p>Setiap statement harus diakhir dengan titik koma <code>;</code>, kecuali
+statement-statement tertentu seperti <code>if</code>, <code>for</code>, <code>while</code>, <code>class</code> dan
+sebagainya.</p>
+<h4 id="keyword-import">Keyword import</h4>
+<p>Digunakan untuk memanggil library/fungsi-fungsi yang telah disediakan oleh
+bahasa Java. Perintah <code>import java.util.Scanner;</code> digunakan untuk memanggil
+library <code>Scanner</code> yang diperlukan untuk menerima input dari keyboard yang akan
+dibahas di bagian input.</p>
+<h4 id="kurung-kurawal">Kurung Kurawal</h4>
+<p>Kurung kurawal berfungsi untuk memberitahu komputer bahwa perintah-perintah di
+dalamnya merupakan satu kesatuan. Singkatnya, kurung kurawal digunakan untuk
+membuat sekumpulan perintah (compount statement/block).</p>
+<h4 id="output">Output</h4>
+<p>Setiap program pasti menghasilkan output. Salah satu cara untuk menampilkan output adalah dengan
+menampilkannya ke layar. Untuk menampilkan ke layar, ada beberapa cara:</p>
+<ol>
+<li><p><code>System.out.print(&#x201C;Hello world&#x201D;);</code> Perintah ini akan menampilkan kata Hello
+world ke layar, atau apapun yang kita tuliskan didalam tanda petik.</p>
+</li>
+<li><p><code>System.out.println(&#x201C;Hello world&#x201D;);</code> Perintah ini akan menampilkan kata Hello
+world ke layar, atau apapun yang kita tuliskan didalam tanda petik, sekaligus
+memberi perintah ganti baris di akhir kata/kalimat.</p>
+</li>
+<li><p><code>System.out.println(panjang);</code> Perintah ini akan menampilkan isi variabel
+panjang ke layar. Perhatikan bahwa untuk menampilkan isi variabel, tidak
+perlu menggunakan tanda petik ( &#x201C; ).</p>
+</li>
+<li><p><code>System.out.println(&#x201C;Panjang segi empat: &#x201C; + panjang);</code> Perintah ini akan
+menampilkan kalimat &#x201C;Panjang segi empat: &#x201C; kemudian disambung dengan isi
+variabel panjang ke layar. Perhatikan untuk menyambung kalimat dengan isi
+variabel, digunakan tanda plus ( + ).</p>
+</li>
+</ol>
+<p><strong>Contoh</strong>:</p>
+<ol>
+<li>Menggunakan System.out.print()<pre><code class="lang-java">System.out.print(<span class="hljs-string">&quot;Hello World!&quot;</span>);
+System.out.print(<span class="hljs-string">&quot;Nama saya Jack&quot;</span>);
+</code></pre>
+Hasil<pre><code>Hello World!Nama saya Jack
+</code></pre></li>
+<li>Menggunakan System.out.println()<pre><code class="lang-java">System.out.println(<span class="hljs-string">&quot;Hello World!&quot;</span>);
+System.out.println(<span class="hljs-string">&quot;Nama saya Jack&quot;</span>);
+</code></pre>
+Hasil<pre><code>Hello World!
+Nama saya Jack
+</code></pre></li>
+<li>Menampilkan isi variabel panjang<pre><code class="lang-java"><span class="hljs-keyword">int</span> panjang = <span class="hljs-number">10</span>;
+System.out.println(panjang);
+</code></pre>
+Hasil<pre><code>10
+</code></pre></li>
+<li>Menampilkan kalimat &quot;Panjang segi empat&quot; dan disambung dengan isi variabel
+panjang<pre><code class="lang-java"><span class="hljs-keyword">int</span> panjang = <span class="hljs-number">10</span>;
+System.out.println(<span class="hljs-string">&quot;Panjang segi empat: &quot;</span> + panjang);
+</code></pre>
+Hasil<pre><code>Panjang segi empat: 10
+</code></pre></li>
+</ol>
+<p>Pada output program terdapat beberapa karakter khusus. Karakter-karakter ini
+dikenal dengan istilah escape sequence. Karakter-karakter yang umum digunakan
+dapat dilihat pada tabel berikut ini:</p>
+<table>
+<thead>
+<tr>
+<th>Escape Sequence</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\n</td>
+<td>baris baru</td>
+</tr>
+<tr>
+<td>\</td>
+<td>Karakter backslash</td>
+</tr>
+<tr>
+<td>%%</td>
+<td>Karkter %</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>Karakter tab</td>
+</tr>
+<tr>
+<td>\&quot;</td>
+<td>Karakter &quot;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="input">Input</h4>
+<p>Untuk membaca input dari keyboard, pertama-tama kita pastikan bahwa library
+Scanner sudah kita sertakan. Caranya adalah dengan menuliskan perintah <code>import
+java.util.Scanner;</code> di baris paling atas dari kode program kita. Selanjutnya
+kita tuliskan perintah deklarasi scanner berikut ini didalam fungsi main():</p>
+<pre><code class="lang-java">Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+</code></pre>
+<p>Selanjutnya, tergantung dari jenis input yang akan kita masukkan, berupa
+bilangan bulat (int), bilangan koma (float/double), atau karakter (String).</p>
+<ol>
+<li>Jika input berupa bilangan bulat, maka perintahnya adalah: <code>nextInt();</code></li>
+<li>Jika input berupa bilangan koma, maka perintahnya adalah: <code>nextFloat();</code></li>
+<li>Jika input berupa bilangan bulat, maka perintahnya adalah: <code>nextLine();</code></li>
+</ol>
+<p><strong>Contoh</strong>:</p>
+<ol>
+<li><p>Input berupa bilangan bulat:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> </span>{
+ <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+   Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+   <span class="hljs-keyword">int</span> usia;
+   System.out.print(<span class="hljs-string">&quot;Masukkan usia anda: &quot;</span>);
+   usia = sc.nextInt();
+   System.out.print(<span class="hljs-string">&quot;Usia anda adalah: &quot;</span> + usia);
+ }
+}
+</code></pre>
+<p>Hasil</p>
+<pre><code>Masukkan usia anda: 20
+Usia anda adalah 20
+</code></pre></li>
+<li><p>Input berupa dua buah bilangan:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> </span>{
+ <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+   Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+   <span class="hljs-keyword">int</span> panjang, lebar;
+   System.out.print(<span class="hljs-string">&quot;Masukkan panjang: &quot;</span>);
+   panjang = sc.nextInt();
+   System.out.print(<span class="hljs-string">&quot;Masukkan lebar: &quot;</span>);
+   lebar = sc.nextInt();
+   System.out.print(<span class="hljs-string">&quot;Nilai dari panjang: &quot;</span> + panjang);
+   System.out.print(<span class="hljs-string">&quot;Nilai dari lebar: &quot;</span> + lebar);
+ }
+}
+</code></pre>
+<p>Hasil</p>
+<pre><code>Masukkan panjang: 15
+Masukkan lebar: 7
+Nilai dari panjang: 15
+Nilai dari lebar: 7
+</code></pre></li>
+</ol>
+<p><strong>Catatan</strong>:</p>
+<p>Jika didalam program terdapat beberapa input yang berbeda-beda tipe datanya,
+maka deklarasi scanner harus dibuat sejumlah tipe data input yang berbeda
+tersebut. Misalkan terdapat satu input berupa bilangan bulat dan satu input
+berupa String, maka perlu dibuat dua deklarasi scanner (satu untuk int dan satu
+untuk String).</p>
+<p>Contoh:</p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+    Scanner scInt = <span class="hljs-keyword">new</span> Scanner(System.in);
+    Scanner scString = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+    <span class="hljs-keyword">int</span> usia;
+    String nama;
+
+    System.out.print(<span class="hljs-string">&quot;Masukkan usia anda: &quot;</span>);
+    panjang = scInt.nextInt();
+    System.out.print(<span class="hljs-string">&quot;Masukkan nama anda: &quot;</span>);
+    lebar = scString.nextLine();
+    System.out.print(<span class="hljs-string">&quot;Nama anda: &quot;</span> + nama);
+    System.out.print(<span class="hljs-string">&quot;Usia anda: &quot;</span> + usia);
+  }
+}
+</code></pre>
+<h3 id="langkah-praktikum">Langkah Praktikum</h3>
+<p>ikuti langkah-langkah praktikum berikut ini.</p>
+<h4 id="praktikum-1">Praktikum 1</h4>
+<ol>
+<li>Buka teks editor</li>
+<li>Buat file baru, beri nama &quot;Hitung.java&quot;</li>
+<li>Tuliskan struktur dasar bahasa java yang berisi fungsi main().</li>
+<li>Tambahkan import library Scanner di bagian paling atas kode program.<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Scanner;
+</code></pre>
+</li>
+<li>Deklarasikan Scanner<pre><code class="lang-java">Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+</code></pre>
+</li>
+<li>Buatlah variabel bertipe int, beri nama variabel tersebut dengan angka.<pre><code class="lang-java"><span class="hljs-keyword">int</span> angka;
+</code></pre>
+</li>
+<li>Tambahkan kode berikut ini untuk menerima input dari keyboard<pre><code class="lang-java">System.out.print(<span class="hljs-string">&quot;Masukkan angka: &quot;</span>);
+angka = sc.nextInt();
+</code></pre>
+</li>
+<li>Tambahkan kode berikut ini untuk menampilkan isi dari variabel angka<pre><code class="lang-java">System.out.println(<span class="hljs-string">&quot;Isi variabel angka: &quot;</span> + angka);
+</code></pre>
+</li>
+<li>Lakukan kompilasi kemudian jalankan program. Amati apa yang terjadi.</li>
+</ol>
+<h4 id="praktikum-2">Praktikum 2</h4>
+<ol>
+<li>Buat file baru beri nama Segitiga.java</li>
+<li><p>Amati flowchart program untuk menghitung luas segitiga berikut ini:</p>
+<p><img src="images/04/segitiga.svg" alt="flowchart segitiga"></p>
+</li>
+<li><p>Buatlah struktur dasar program Java yang terdiri dari fungsi main().</p>
+</li>
+<li>Tambahkan library Scanner</li>
+<li>Buat deklarasi Scanner.</li>
+<li>Buat variabel int untuk alas dan tinggi, kemudian variabel float untuk luas.<pre><code class="lang-java"><span class="hljs-keyword">int</span> alas, tinggi;
+<span class="hljs-keyword">float</span> luas;
+</code></pre>
+</li>
+<li>Tuliskan perintah untuk menginputkan alas dan tinggi:<pre><code class="lang-java">System.out.print(<span class="hljs-string">&quot;Masukkan alas: &quot;</span>);
+alas = sc.nextInt();
+System.out.print(<span class="hljs-string">&quot;Masukkan tinggi: &quot;</span>);
+tinggi = sc.nextInt();
+</code></pre>
+</li>
+<li>Tuliskan perintah untuk menghitung luas segitiga berikut ini:<pre><code class="lang-java">luas = alas * tinggi / <span class="hljs-number">2</span>;
+</code></pre>
+</li>
+<li>Tampilkan isi variabel luas<pre><code class="lang-java">System.out.println(<span class="hljs-string">&quot;Luas segitiga: &quot;</span> + luas);
+</code></pre>
+</li>
+<li>Lakukan kompilasi dan jalankan program. Amati apa yang terjadi.</li>
+</ol>
+<h4 id="praktikum-3">Praktikum 3</h4>
+<ol>
+<li>Buat file baru beri nama Biodata.java</li>
+<li>Buat struktur dasar program java yang berisi fungsi main()</li>
+<li>Tambahkan library Scanner.</li>
+<li>Buat dua deklarasi Scanner. Satu untuk input berupa int dan satu untuk
+String.<pre><code class="lang-java">Scanner scInt = <span class="hljs-keyword">new</span> Scanner(System.in);
+Scanner scString = <span class="hljs-keyword">new</span> Scanner(System.in);
+</code></pre>
+</li>
+<li>Buat variabel String untuk nama dan noHp, kemudian variabel int untuk usia
+dan tinggiBadan.<pre><code class="lang-java">String nama, noHp;
+<span class="hljs-keyword">int</span> usia, tinggiBadan;
+</code></pre>
+</li>
+<li><p>Tuliskan kode untuk menginputkan nama, noHP, usia dan tinggiBadan.</p>
+<pre><code class="lang-java">System.out.print(<span class="hljs-string">&quot;Masukkan nama: &quot;</span>);
+nama = scString.nextLine();
+
+System.out.print(<span class="hljs-string">&quot;Masukkan no HP: &quot;</span>);
+noHp = scString.nextLine();
+
+System.out.print(<span class="hljs-string">&quot;Masukkan usia: &quot;</span>);
+usia = scString.nextInt();
+
+System.out.print(<span class="hljs-string">&quot;Tinggi badan: &quot;</span>);
+tinggiBadan = scString.nextInt();
+</code></pre>
+</li>
+<li>Tuliskan kode untuk menampilkan biodata<pre><code class="lang-java">System.out.println(<span class="hljs-string">&quot;Nama: &quot;</span> + nama);
+System.out.println(<span class="hljs-string">&quot;No. HP: &quot;</span> + noHp);
+System.out.println(<span class="hljs-string">&quot;Usia: &quot;</span> + usia);
+System.out.println(<span class="hljs-string">&quot;Tinggi badan: &quot;</span> + tinggiBadan);
+</code></pre>
+</li>
+<li>Lakukan kompilasi dan jalankan program, amati apa yang terjadi.</li>
+</ol>
+<h4 id="pertanyaan">Pertanyaan</h4>
+<p>Jawablah pertanyaan berikut ini.</p>
+<ol>
+<li>Apa yang dimaksud dengan variabel?</li>
+<li><p>Jelaskan masing-masing kegunaan tipe variabel berikut ini:</p>
+<ul>
+<li>int</li>
+<li>float</li>
+<li>String</li>
+</ul>
+</li>
+<li><p>Apa kegunaan dari perintah:</p>
+<ul>
+<li>int angka;</li>
+<li>String alamat;</li>
+<li>int panjang = 100;</li>
+<li>import java.util.Scanner;</li>
+<li>Scanner sc = new Scanner(System.in);</li>
+<li>System.out.print(&quot;Isi variabel angka: &quot; + angka);</li>
+<li>angka = sc.nextInt();</li>
+<li>alamat = sc.nextLine();</li>
+</ul>
+</li>
+<li><p>Amati kode program berikut ini:</p>
+</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Scanner;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hello</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+    Scanner sc = <span class="hljs-keyword">new</span> Scanner(System.in);
+
+    <span class="hljs-keyword">int</span> usia;
+
+    System.out.print(<span class="hljs-string">&quot;Masukkan usia anda: &quot;</span>);
+    umur = sc.nextInt();
+
+    System.out.println(<span class="hljs-string">&quot;Usia anda: &quot;</span> + usia);
+  }
+}
+</code></pre>
+<p>Bagian mana kode tersebut terdapat kesalahan? dan seharusnya bagaimana?</p>
+<h3 id="tugas">Tugas</h3>
+<p>Kerjakan tugas sesuai dengan instruksi berikut ini.</p>
+<ul>
+<li><p>Dengan menggunakan fungsi <code>System.out.println()</code> dan penggunaan karakter escape
+ sequence, buatlah program untuk menampilkan biodata anda  dengan format
+ seperti berikut ini:</p>
+<pre><code> NIM    : &quot;1234567890&quot;
+ Nama   : &quot;Indah Cantik Jelita&quot;
+ Kelas  : &quot;TI-MI&quot;
+ Alamat : &quot;Malang&quot;
+</code></pre></li>
+<li><p>Perhatikan tabel di bawah ini:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Nama Variabel</th>
+<th>Tipe Data</th>
+<th>Nilai awal</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kampus</td>
+<td>Kalimat</td>
+<td>Polinema</td>
+<td></td>
+</tr>
+<tr>
+<td>tingkat</td>
+<td>Bilangan bulat</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>kelas</td>
+<td>Karakter</td>
+<td>Z</td>
+<td>nilai awal = kelas anda</td>
+</tr>
+<tr>
+<td>bilanganBulat</td>
+<td>Bilangan bulat</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>bilanganPecahang</td>
+<td>Bilangan pecahan</td>
+<td>3.33333</td>
+<td></td>
+</tr>
+<tr>
+<td>karakter</td>
+<td>Karakter</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p>  Dari informasi tabel tersebut, buatlah program untuk menampilan hasil seperti
+  pada gambar di bawah ini!</p>
+<pre><code>  Saya mahasiswa Polinema kelas 1Z.
+  Saya sedang belajar menampilkan nilai:
+      Bilangan bulat 10
+      Bilangan pecahan 3.33
+      Karakter C
+</code></pre><ul>
+<li><p>Perhatikan baik-baik diagram flowchart program menghitung volume tabung
+ berikut ini:</p>
+<p><img src="images/04/tabung.svg" alt="flowchart tabung"></p>
+<p>Implementasikan flowchart yang telah dirancang ke dalam program dengan
+menggunakan bahasa pemrograman java!</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Jobsheet 3">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Jobsheet 4","level":"1.5","depth":1,"previous":{"title":"Jobsheet 3","level":"1.4","depth":1,"path":"jobsheets/2017/03.md","ref":"jobsheets/2017/03.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"jobsheets/2017/04.md","mtime":"2017-10-03T23:21:54.291Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-03T20:23:41.278Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
